@@ -4,12 +4,13 @@
 2. Read the configuration.json
 3. Use https://flightphp.com/
 4. Use this library to connect to mysql https://redbeanphp.com/index.php
-5. Make a class called Model_builder.php with function build.
-6. In build function, read the configuration.json and make the following for each model:
+5. Create release folder
+6. Make a class called Model_builder.php with function build.
+7. In build function, read the configuration.json and make the following for each model:
 
 - add form view page that submit it to an api that save to database for current model
 
-6. This need to be done today
+7. This need to be done today
 
 Example
 
