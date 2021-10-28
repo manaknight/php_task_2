@@ -5,12 +5,13 @@
 3. Use https://flightphp.com/
 4. Use this library to connect to mysql https://redbeanphp.com/index.php
 5. Create release folder
-6. Make a class called Model_builder.php with function build.
-7. In build function, read the configuration.json and make the following for each model:
-
-- add form view page that submit it to an api that save to database for current model
-
-7. This need to be done today
+6. Make a class called Model_builder.php with function build. In consturctor read configuration file and save as private variable.
+7. In build function, loop through models and do the following:
+- create view page where we have a form to add model
+- create a flightphp api that takes the form input from the view page and save it into database
+- model file that wraps around redbeanphp and does db processing
+8. Make sure the code is organized well. Follow the builder design pattern.
+9. This need to be done today
 
 Example
 
@@ -46,4 +47,13 @@ add view page (you need to generate this from configuration.json. If there are m
 <input type="number" name="status" id="status" value="" required/>
 <input type="submit" name="submit" id="submit" value="Submit"/>
 </form>
+
+Flight::route('/<model>', function() {
+  $name = Flight::request()->data->name;
+  $status = Flight::request()->data->status;
+  
+  //Validate the fields
+  
+  //DB code to insert into db
+});
 ```
