@@ -8,10 +8,11 @@
 6. Make a class called Model_builder.php with function build. In consturctor read configuration file and save as private variable.
 7. In build function, loop through models and do the following:
 - create view page where we have a form to add model
-- create a flightphp api that takes the form input from the view page and save it into database
 - model file that wraps around redbeanphp and does db processing
-8. Make sure the code is organized well. Follow the builder design pattern.
-9. This need to be done today
+8.Make a class called Controller_builder.php with function build. In consturctor read configuration file and save as private variable.
+- create a flightphp post request and save it to the database
+9. Make sure the code is organized well. Follow the builder design pattern. There needs to be spaces between operators and variables. Don't be lazy about this.
+10. This need to be done today
 
 Example
 
